@@ -1,1 +1,242 @@
 /* Other rules */
+
+/* -------------- CONTAINER ---------- */
+.container {
+  width: 1284px;
+  margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* --------------HEADER--------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.header img {
+  height: 40px;
+}
+
+.header button {
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 116px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1px #2baeb7;
+}
+
+.header > div {
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+}
+
+.header > div > div {
+  display: flex;
+  width: 265px;
+  justify-content: space-between;
+}
+
+.header > div > button {
+  background-color: #2baeb7;
+  color: white;
+}
+
+.account-connect button {
+  background-color: white;
+  color: #2baeb7;
+}
+
+/* ----------- HOME ---------- */
+
+.img-grid {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-link {
+  margin-bottom: 20px;
+}
+
+.img-offers {
+  width: 265px;
+  height: 360px;
+  object-fit: cover;
+
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* ----------- HERO -------------- */
+
+.hero {
+  background-image: url(./assets/img/hero.09bfd0f9.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px;
+  width: 100vw;
+  height: 456px;
+}
+
+.hero > div > div {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: solid black 1px; */
+  padding: 40px 20px;
+  padding-top: 60px;
+  padding-right: 50px;
+  width: 414px;
+  height: 270px;
+  border-radius: 5px;
+}
+
+.hero button {
+  background-color: #2baeb7;
+  border: none;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.hero p {
+  font-size: 34px;
+}
+/* ------------ OFFER ------------------- */
+
+.container-offer {
+  background-color: #eaedee;
+  height: 100vh;
+}
+
+.offer {
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.offer img {
+  height: 600px;
+}
+
+.offer > div {
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  width: 404px;
+  /* border: solid 1px black; */
+  padding: 40px 40px;
+}
+
+/* .product-details div:first-child {
+  /* background-color: green;
+  
+  
+} */
+
+.product-details-top {
+  padding-bottom: 60px;
+  border-bottom: solid 1px #e7e7e7;
+}
+.price-info {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.product-info-box {
+  display: flex;
+  /* flex-direction: column; */
+  /* border: solid 1px black; */
+}
+
+.product-info-values {
+  margin-left: 60px;
+}
+
+.product-info-keys p {
+  margin-bottom: 5px;
+}
+
+.product-info-values p {
+  margin-bottom: 5px;
+}
+
+.product-details-bottom button {
+  background-color: #0cb0ba;
+  color: white;
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin-top: 60px;
+}
+
+/* ------------------- SIGNUP ----------------- */
+
+.signup {
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+}
+
+.signup h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 470px;
+  /* border: solid 1px black; */
+}
+
+.signup > form > input {
+  box-sizing: border-box;
+  height: 44px;
+  width: 260px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.signup > form > input:nth-child(n + 1):nth-child(-n + 4) {
+  border-bottom: 1px solid red;
+}
+
+::placeholder {
+  color: #cccdce;
+}
+
+.signup > form > div {
+  /* background-color: skyblue; */
+  margin-top: 30px;
+}
+
+.signup > form > div > input:last-child {
+  background-color: #2eb0ba;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 44px;
+  width: 260px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
