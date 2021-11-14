@@ -218,7 +218,7 @@ button:hover {
 }
 
 .signup > form > input:nth-child(n + 1):nth-child(-n + 4) {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #fcced2;
 }
 
 ::placeholder {
@@ -239,4 +239,12 @@ button:hover {
   width: 260px;
   margin-bottom: 20px;
   margin-top: 40px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+.signup > form > div > input:last-child:hover {
+  cursor: pointer;
 }
