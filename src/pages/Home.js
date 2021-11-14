@@ -16,15 +16,13 @@ const Home = () => {
       setData(response.data);
       setIsLoading(false);
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
     }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
-
-  console.log(data);
 
   return isLoading ? (
     <p>En cours de chargement</p>

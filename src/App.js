@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Offer from './pages/Offer';
 import Signup from './pages/Signup';
+import Login from './pages/Login';
 
 const App = () => {
   const [token, setToken] = useState(null);
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/offers/:id" element={<Offer />} />
           <Route path="/user/signup" element={<Signup setUser={setUser} />} />
+          <Route path="/user/login" element={<Login setUser={setUser} />} />
         </Routes>
       </div>
     </Router>

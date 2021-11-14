@@ -57,14 +57,14 @@ const Signup = ({ setUser }) => {
         />
         <input
           onChange={handleChangeEmail}
-          type="text"
+          type="email"
           name="email"
           placeholder="Email"
           value={email}
         />
         <input
           onChange={handleChangePassword}
-          type="text"
+          type="password"
           name="password"
           placeholder="Mot de passe"
           value={password}

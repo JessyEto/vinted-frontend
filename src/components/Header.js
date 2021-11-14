@@ -1,7 +1,7 @@
 import logoVinted from '../assets/img/logoVinted.png';
 import { Link } from 'react-router-dom';
 
-const Header = ({ token, setToken }) => {
+const Header = ({ setToken, token }) => {
   return (
     <div className="container header">
       <Link to="/">
@@ -9,13 +9,25 @@ const Header = ({ token, setToken }) => {
       </Link>
       <div>
         {token ? (
-          <p>Se déconnecter</p>
+          <div>
+            <Link to="/">
+              <button
+                onClick={() => {
+                  setToken(null);
+                }}
+              >
+                Se déconnecter
+              </button>
+            </Link>
+          </div>
         ) : (
           <div className="account-connect">
             <Link to="/user/signup">
               <button>S'inscrire</button>
             </Link>
-            <button>Se connecter</button>
+            <Link to="/user/login">
+              <button>Se connecter</button>
+            </Link>
           </div>
         )}
 

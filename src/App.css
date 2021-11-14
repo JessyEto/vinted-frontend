@@ -248,3 +248,18 @@ button:hover {
 .signup > form > div > input:last-child:hover {
   cursor: pointer;
 }
+
+.seconnecter {
+  background-color: #2eb0ba;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 44px;
+  width: 260px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.seconnecter:hover {
+  cursor: pointer;
+}
