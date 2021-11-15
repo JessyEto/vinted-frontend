@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 // Components importations
@@ -15,6 +15,10 @@ import Publish from './pages/Publish';
 
 const App = () => {
   const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    setToken(Cookies.get('TokenUser'));
+  }, []);
 
   const setUser = (token) => {
     if (token) {
