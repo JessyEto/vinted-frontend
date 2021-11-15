@@ -72,7 +72,7 @@ const Signup = ({ setUser }) => {
         <div>
           <div className="checkbox">
             <input type="checkbox" name="newsletter" />
-            <label htmlFor="newslater">S'inscrire à notre newsletter</label>
+            <label htmlFor="newsletter">S'inscrire à notre newsletter</label>
           </div>
 
           <p>

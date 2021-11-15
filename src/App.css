@@ -29,7 +29,6 @@ button:hover {
   width: 116px;
   height: 30px;
   border-radius: 5px;
-  border: solid 1px #2baeb7;
 }
 
 .header > div {
@@ -44,14 +43,22 @@ button:hover {
   justify-content: space-between;
 }
 
-.header > div > button {
+.sellarticles {
   background-color: #2baeb7;
   color: white;
+  border: solid 1px #2baeb7;
 }
 
 .account-connect button {
   background-color: white;
   color: #2baeb7;
+  border: solid 1px #2baeb7;
+}
+
+.sedeconnecter {
+  background-color: #c2175b;
+  color: white;
+  border: none;
 }
 
 /* ----------- HOME ---------- */
@@ -262,4 +269,72 @@ button:hover {
 
 .seconnecter:hover {
   cursor: pointer;
+}
+
+/* ----------------- PUBLISH ----------------- */
+
+.container-publish {
+  background-color: #eaedee;
+  /* height: 100vh; */
+}
+
+.publish h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.publish {
+  padding-top: 30px;
+}
+
+.publish > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: white;
+  border: solid 1px grey;
+}
+
+.publish > div > div {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  height: 75px;
+  border-bottom: solid 1px #c4c7c9;
+}
+
+.publish > div > div input {
+  width: 635px;
+  height: 20px;
+  border: none;
+  border-bottom: solid 1px #c4c7c9;
+}
+
+#textarea-publish {
+  width: 635px;
+  border: none;
+  border-bottom: solid 1px #c4c7c9;
+}
+
+.publish > div:first-child {
+  background-color: green;
+  height: 80px;
+}
+
+.picture-upload {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+
+/* .checkbox-item div {
+  background-color: hotpink;
+  width: 20px;
+} */
+.checkbox-item {
+  display: flex;
+  /* background-color: red; */
+  /* width: 635px; */
 }

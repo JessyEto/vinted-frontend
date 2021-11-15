@@ -11,15 +11,16 @@ import Home from './pages/Home';
 import Offer from './pages/Offer';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Publish from './pages/Publish';
 
 const App = () => {
   const [token, setToken] = useState(null);
 
   const setUser = (token) => {
     if (token) {
-      Cookies.set('token', token, { expires: 1 });
+      Cookies.set('TokenUser', token, { expires: 10 });
     } else {
-      Cookies.remove('token');
+      Cookies.remove('TokenUser');
     }
     setToken(token);
   };
@@ -27,12 +28,13 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Header token={token} setToken={setToken} />
+        <Header token={token} setUser={setUser} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offers/:id" element={<Offer />} />
           <Route path="/user/signup" element={<Signup setUser={setUser} />} />
           <Route path="/user/login" element={<Login setUser={setUser} />} />
+          <Route path="/offer/publish" element={<Publish token={token} />} />
         </Routes>
       </div>
     </Router>

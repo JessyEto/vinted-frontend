@@ -13,6 +13,8 @@ const Home = () => {
         'https://vinted-api-jess.herokuapp.com/offers'
       );
 
+      // https://vinted-api-jess.herokuapp.com/offers
+
       setData(response.data);
       setIsLoading(false);
     } catch (error) {
@@ -43,7 +45,7 @@ const Home = () => {
                 src={elem.product_image.secure_url}
                 alt=""
               />
-              <p>{elem.product_price}</p>
+              <p>{elem.product_price} €</p>
               <p>{elem.product_details[1].TAILLE}</p>
               <p>{elem.product_details[0].MARQUE}</p>
             </Link>
