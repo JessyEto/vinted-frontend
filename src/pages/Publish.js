@@ -155,10 +155,9 @@ const Publish = ({ token }) => {
             />
           </div>
           <div className="checkbox-item">
-            <div>
-              <input type="checkbox" />
-            </div>
-            <span>Je suis intéressé(e) par les échanges</span>
+            <span>
+              <input type="checkbox" /> Je suis intéressé(e) par les échanges
+            </span>
           </div>
         </div>
         <input type="submit" name="ajouter-article" value="Ajouter" />
