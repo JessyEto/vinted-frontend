@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Offer = () => {
   const { id } = useParams();
@@ -14,6 +15,7 @@ const Offer = () => {
           `https://vinted-api-jess.herokuapp.com/offer/${id}`
         );
         setDataId(response.data);
+        console.log(response.data);
         setIsOfferLoading(false);
       } catch (error) {
         console.log(error.message);
@@ -21,7 +23,6 @@ const Offer = () => {
     };
     fetchDataId();
   }, [id]);
-  console.log(dataId);
   return isOfferLoading ? (
     <div>chargement de l'offre en cours</div>
   ) : (
@@ -48,7 +49,15 @@ const Offer = () => {
             <p>{dataId.product_name}</p>
             <p>{dataId.product_description}</p>
             <p>{dataId.owner.account.username}</p>
-            <button>Acheter</button>
+            <Link
+              to="/payment"
+              state={{
+                description: dataId.product_description,
+                price: dataId.product_price,
+              }}
+            >
+              <button>Acheter</button>
+            </Link>
           </div>
         </div>
       </div>

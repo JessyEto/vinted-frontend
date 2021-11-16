@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ const Login = ({ setUser }) => {
         }
       );
       if (response.data.token) {
-        setUser(response.data.token);
+        setUser(response.data.token, response.data._id);
         navigate('/');
       }
     } catch (error) {
@@ -47,6 +48,9 @@ const Login = ({ setUser }) => {
           value={password}
         />
         <input className="seconnecter" type="submit" value="Se connecter" />
+        <Link to="/user/signup">
+          <p>Pas encore de compte ? Inscris-toi !</p>
+        </Link>
       </form>
     </div>
   );

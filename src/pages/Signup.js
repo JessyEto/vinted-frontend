@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Signup = ({ setUser }) => {
   const [username, setUsername] = useState('');
@@ -37,7 +38,7 @@ const Signup = ({ setUser }) => {
         }
       );
       if (response.data.token) {
-        setUser(response.data.token);
+        setUser(response.data.token, response.data._id);
         navigate('/');
       }
     } catch (error) {
@@ -82,7 +83,9 @@ const Signup = ({ setUser }) => {
           </p>
           <input type="submit" value="S'inscrire" />
         </div>
-        <p>tu as déjà un compte ? connecte toi !</p>
+        <Link to="/user/login">
+          <p>tu as déjà un compte ? connecte toi !</p>
+        </Link>
       </form>
     </div>
   );

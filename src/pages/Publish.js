@@ -1,8 +1,9 @@
-import { Navigate } from 'react-router';
+import { Navigate, useNavigate } from 'react-router';
 import { useState } from 'react';
 import axios from 'axios';
 
 const Publish = ({ token }) => {
+  const navigate = useNavigate();
   const [titre, setTitre] = useState('');
   const [description, setDescription] = useState('');
   const [marque, setMarque] = useState('');
@@ -35,13 +36,12 @@ const Publish = ({ token }) => {
         {
           headers: {
             authorization: `Bearer ${token}`,
-
-            // CitBeR2M1O4QSLmM
-            // jKiOPPdf0cx28iOpuKQQZ2x5auFreXVAjSyTkPFpIBvex6FFFlCA9aU3NfV0yfVp
           },
         }
       );
-      console.log(response.data);
+      if (response.data) {
+        navigate('/');
+      }
     } catch (error) {
       alert(error.response);
     }
@@ -155,16 +155,22 @@ const Publish = ({ token }) => {
             />
           </div>
           <div className="checkbox-item">
-            <span>
-              <input type="checkbox" /> Je suis intéressé(e) par les échanges
-            </span>
+            <div>
+              <input type="checkbox" name="checkboxlast" />
+              <span>Je suis intéressé(e) par les échanges</span>
+            </div>
           </div>
         </div>
-        <input type="submit" name="ajouter-article" value="Ajouter" />
+        <input
+          className="submit-article"
+          type="submit"
+          name="ajouter-article"
+          value="Ajouter"
+        />
       </form>
     </div>
   ) : (
-    <Navigate to="/" />
+    <Navigate to="/user/login" />
   );
 };
 
